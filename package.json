@@ -1,5 +1,5 @@
 {
-  "name": "easy-form-data",
+  "name": "simple-form-data-function",
   "version": "1.0.0",
   "description": "This package provides a utility function `easyFormData` for converting a JavaScript object into `FormData` format, which is especially useful when the content type is `multipart/form-data`. This utility can be used directly in the `body` of a `fetch` request.",
   "author": "Parsa Jiravand",

@@ -7,7 +7,7 @@ This package provides a utility function `easyFormData` for converting a JavaScr
 To install the package, use npm:
 
 ```sh
-npm install simple-form-data
+npm install simple-form-data-function
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ The `easyFormData` function takes an object and converts it into a `FormData` in
 If your body object does not contain nested arrays, you can use easyFormData with the default formDataWithChild parameter set to false (or omit it entirely).
 
 ```javascript
-import { easyFormData } from "simple-form-data";
+import { easyFormData } from "simple-form-data-function";
 
 const body = {
   name: "John Doe",
@@ -57,7 +57,7 @@ fetch("https://example.com/api/update-profile", {
 Here's an example of how to use `easyFormData` in a `fetch` request:
 
 ```javascript
-import { easyFormData } from "simple-form-data";
+import { easyFormData } from "simple-form-data-function";
 
 const body = {
   id: 1,
