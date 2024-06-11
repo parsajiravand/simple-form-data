@@ -1,0 +1,27 @@
+{
+  "name": "simple-form-data",
+  "version": "1.0.0",
+  "description": "This package provides a utility function `simpleFormData` for converting a JavaScript object into `FormData` format, which is especially useful when the content type is `multipart/form-data`. This utility can be used directly in the `body` of a `fetch` request.",
+  "author": "Parsa Jiravand",
+  "private": false,
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [
+    "form-data",
+    "multipart",
+    "fetch",
+    "utility",
+    "function",
+    "simple",
+    "data",
+    "multipart/form-data"
+  ]
+}
