@@ -1,6 +1,6 @@
-# simple-form-data
+# simple-form-data-function
 
-This package provides a utility function `easyFormData` for converting a JavaScript object into `FormData` format, which is especially useful when the content type is `"multipart/form-data"`. This utility can be used directly in the `body` of a `fetch` request.
+This package provides a utility function `simpleFormData` for converting a JavaScript object into `FormData` format, which is especially useful when the content type is `"multipart/form-data"`. This utility can be used directly in the `body` of a `fetch` request.
 
 ## Installation
 
@@ -12,9 +12,9 @@ npm install simple-form-data-function
 
 ## Usage
 
-### `easyFormData`
+### `simpleFormData`
 
-The `easyFormData` function takes an object and converts it into a `FormData` instance. This is useful when you need to send form data, including nested objects and arrays, using a `fetch` request.
+The `simpleFormData` function takes an object and converts it into a `FormData` instance. This is useful when you need to send form data, including nested objects and arrays, using a `fetch` request.
 
 #### Parameters
 
@@ -27,10 +27,10 @@ The `easyFormData` function takes an object and converts it into a `FormData` in
 
 ### Simple Example Without Nested Arrays
 
-If your body object does not contain nested arrays, you can use easyFormData with the default formDataWithChild parameter set to false (or omit it entirely).
+If your body object does not contain nested arrays, you can use simpleFormData with the default formDataWithChild parameter set to false (or omit it entirely).
 
 ```javascript
-import { easyFormData } from "simple-form-data-function";
+import { simpleFormData } from "simple-form-data-function";
 
 const body = {
   name: "John Doe",
@@ -38,7 +38,7 @@ const body = {
   profilePicture: new File(["content"], "profile.jpg"),
 };
 
-const formData = easyFormData(body);
+const formData = simpleFormData(body);
 
 fetch("https://example.com/api/update-profile", {
   method: "POST", // or any method you want
@@ -54,10 +54,10 @@ fetch("https://example.com/api/update-profile", {
 
 ### Example (Array with children)
 
-Here's an example of how to use `easyFormData` in a `fetch` request:
+Here's an example of how to use `simpleFormData` in a `fetch` request:
 
 ```javascript
-import { easyFormData } from "simple-form-data-function";
+import { simpleFormData } from "simple-form-data-function";
 
 const body = {
   id: 1,
@@ -71,7 +71,7 @@ const body = {
   ],
 };
 
-const formData = easyFormData(body, true);
+const formData = simpleFormData(body, true);
 
 fetch("https://example.com/api/upload", {
   method: "POST", // or any method you want
@@ -95,7 +95,7 @@ fetch("https://example.com/api/upload", {
 - **Simplified Looping**: The function uses a single `for` loop to iterate through the entries of the `body` object, and a helper function `appendToFormData` to handle nested objects and arrays. This reduces the complexity and improves readability.
 - **Handles Various Data Types**: The function now correctly handles `File` objects, nested objects, and other data types, ensuring all types are appended correctly to the `FormData`.
 
-This highlights the enhancements made to the `easyFormData` function, making it more efficient, easier to use, and capable of handling a wider range of data types and structures.
+This highlights the enhancements made to the `simpleFormData` function, making it more efficient, easier to use, and capable of handling a wider range of data types and structures.
 
 ## License
 

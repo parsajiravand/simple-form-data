@@ -1,4 +1,4 @@
-export function easyFormData<BodyType>(
+export function simpleFormData<BodyType>(
   body: BodyType,
   formDataWithChild?: boolean
 ) {
